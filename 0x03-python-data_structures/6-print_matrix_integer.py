@@ -1,13 +1,15 @@
-#!/usr/bin/python3
-
+No#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if len(matrix[0]) != 0:
-            rows = len(matrix)
-            cols = len(matrix[0])
-            for r in range(rows):
-                for c in range(cols):
-                    if c == cols - 1:
-                        print('{:d}'.format(matrix[r][c]))
-                    else:
-                        print('{:d}'.format(matrix[r][c]), end=' ')
-    else: print()
+    '''prints a matrix of integers
+    Args:
+        matrix: 2-d list of lists
+    '''
+    # mat_elements = [row[i] for row in matrix for i in len(row)]
+    mat_elems = [n for row in matrix for n in row]
+    for row in matrix:
+        for i in range(len(row)):
+            if i < len(row) - 1:
+                print('{:d}'.format(row[i]), end=' ')
+            else:
+                print('{:d}'.format(row[i]), end='')
+        print()
