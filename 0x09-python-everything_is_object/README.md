@@ -1,1 +1,2 @@
 EVERYTHING IS OBJECT
+0. Who am I?
